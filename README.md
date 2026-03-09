@@ -1,4 +1,8 @@
-# mcp-web-scraper
+# <img src="logo.png" width="32" height="32"> mcp-web-scraper
+
+[![PyPI Version](https://img.shields.io/pypi/v/mcp-web-scraper.svg)](https://pypi.org/project/mcp-web-scraper/)
+[![Python Version](https://img.shields.io/pypi/pyversions/mcp-web-scraper.svg)](https://pypi.org/project/mcp-web-scraper/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Playwright tabanlı, Javascript render eden sayfaları otonom şekilde tarayan (scrape) ve bunu **Model Context Protocol (MCP)** standartlarıyla AI Asistanlarına sunan gelişmiş bir web scraper sunucusudur. 
 
