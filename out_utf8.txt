@@ -1,0 +1,27 @@
+﻿--- Testing scrape_page on https://example.com ---
+Title: Example Domain
+Content length: 142 chars
+Content snippet: Example Domain
+Example Domain
+This domain is for use in documentation examples without needing permi...
+
+--- Testing get_links on https://example.com ---
+Found 1 links.
+First link: {'text': 'Learn more', 'href': 'https://iana.org/domains/example'}
+
+--- Testing take_screenshot on https://example.com ---
+Screenshot taken, base64 length: 14524 chars.
+
+--- Testing extract_table on https://en.wikipedia.org/wiki/Web_scraping ---
+Found table with 1 rows.
+First row: ['', 'This articleneeds additional citations forverification.Please helpimprove this articlebyadding citations to reliable sources. Unsourced material may be challenged and removed.Find sources:"Web scraping"ûnewsÀnewspapersÀbooksÀscholarÀJSTOR(April 2023)(Learn how and when to remove this message)']
+
+--- Testing fill_form on https://example.com ---
+Form fill expectedly threw an error on example.com: RetryError[<Future at 0x2c22d3e39e0 state=finished raised Error>]
+
+--- Testing watch_page on https://example.com ---
+Watch page event: {'url': 'https://example.com', 'event': 'watching_started', 'hash': '4e5c2f581264777fe20b1ef1373047f0'}
+
+--- Testing scrape_queue ---
+Enqueued job: e2cc8573-2348-4cad-ba0e-24d39a927191
+Job Status: completed, Completed: 1
