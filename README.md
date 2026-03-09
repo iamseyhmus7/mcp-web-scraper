@@ -1,29 +1,65 @@
 # mcp-web-scraper
 
-Autonomous web scraper exposed via the **Model Context Protocol (MCP)** using **Playwright**.
+Playwright tabanlı, Javascript render eden sayfaları otonom şekilde tarayan (scrape) ve bunu **Model Context Protocol (MCP)** standartlarıyla AI Asistanlarına sunan gelişmiş bir web scraper sunucusudur. 
 
-## Features
-- **scrape_page**: Extract contents, title, and metadata from any Javascript-rendered URL.
-- **scrape_queue**: Queue multiple URLs for background processing efficiently.
-- **watch_page**: Monitor pages periodically for hashing changes.
-- **take_screenshot**: Return base64-encoded full-page screenshots.
-- **fill_form**: Fill HTML forms via CSS selectors and submit them safely.
-- **extract_table**: Extract structural JSON array representations of tables on the page.
-- **get_links**: Enumerate all available links.
+## 🌟 Özellikler
+- **`scrape_page`**: Herhangi bir URL'den metin içeriklerini, başlığı ve sayfaya dair metadataları okuyun.
+- **`scrape_queue`**: Birden fazla URL'yi arka plan kuyruğuna (job queue) ekleyerek otonom olarak asenkron tarayın.
+- **`watch_page`**: Belirli bir URL'in kaynak içeriği değiştiğinde canlı bildirimler (polling/events) alın.
+- **`take_screenshot`**: Hedef web sayfasının tam ekran görüntüsünü yüksek boyutlu şifrelenmiş (Base64) biçimde yakalayın.
+- **`fill_form`**: CSS Selector'ları kullanarak otomatik ve otonom şekilde web formları doldurun.
+- **`extract_table`**: Hedefteki karmaşık HTML tablolarını kolayca yapılandırılmış JSON verilerine (Array) ayrıştırın.
+- **`get_links`**: Sayfa üzerindeki tüm bağlantıları (links) tek tuşla etiketleyip çekin.
 
-## Requirements
-- Python >= 3.10
-- Chromium browsers installed via `playwright install chromium`
+## 🚀 Anti-Bot (İnsan Taklidi / Stealth)
+Eskimiş dış kütüphanelere bağlı kalmaksızın, kendi içinde barındırdığı **manuel stealth** protokolleri sayesinde:
+- Cloudflare vb. `webdriver` algılayıcılarını tamamen maskeler.
+- Yapay fare hareketleri ile gerçek insan taklidi yapar.
+- İzole context, özel `user-agent` ve dil (`tr-TR`) ayarları üzerinden işlem sağlar.
 
-## Local Execution
-You can use `uv` or `pip` to install from source.
+## 🛠️ Kurulum
+Projeyi ayağa kaldırmak için sisteminizde **Python 3.10+** yüklü olmalıdır.
 
 ```bash
-pip install .
-python -m mcp_web_scraper
+# Projeyi GitHub üzerinden klonlayın
+git clone https://github.com/iamseyhmus7/mcp-web-scraper.git
+cd mcp-web-scraper
+
+# Gereksinimleri yükleyin
+pip install -e .
+
+# Playwright otomasyonu için Chromium tarayıcısını indirin
+playwright install chromium
 ```
 
-### Dev server
-```bash
-mcp dev src/mcp_web_scraper/server.py
+## 🎮 Kullanım
+
+### AI Asistanları (Claude Desktop, Cursor vb.) Üzerinden MCP Entegrasyonu
+Bu server, standart bir `stdio_server` altyapısı kullanarak JSON-RPC 2.0 mimarisini destekler. AI istemcinizin konfigürasyon (örn: `claude_desktop_config.json`) dosyasına aşağıdaki ayarları ekleyin:
+
+```json
+{
+  "mcpServers": {
+    "mcp-web-scraper": {
+      "command": "python",
+      "args": ["-m", "mcp_web_scraper.server"]
+    }
+  }
+}
 ```
+
+*Alternatif olarak `uvx` kurarak doğrudan Smithery komutları (`smithery.yaml`) aracılığıyla kullanabilirsiniz.*
+
+### Deneme ve Geliştirme (Test)
+Uçtan uca tüm bu MCP tool'larının gerçek dünyada nasıl çalıştığını (Wikipedia ve Example sayfalarında) test etmek için proje içindeki test betiğini kullanabilirsiniz:
+
+```bash
+# Tüm tool'ların çıktılarını terminale yansıtan test scripti
+python test_real.py
+
+# Unittest'leri test etmek isterseniz:
+pytest tests/
+```
+
+## 👨‍💻 Geliştirici
+- [Şeyhmus OK](https://github.com/iamseyhmus7)
