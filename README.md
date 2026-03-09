@@ -1,4 +1,6 @@
-# <img src="logo.png" width="32" height="32"> mcp-web-scraper
+<img src="logo.png" width="32" align="left">
+
+# mcp-web-scraper
 
 [![PyPI Version](https://img.shields.io/pypi/v/mcp-web-scraper.svg)](https://pypi.org/project/mcp-web-scraper/)
 [![Python Version](https://img.shields.io/pypi/pyversions/mcp-web-scraper.svg)](https://pypi.org/project/mcp-web-scraper/)
@@ -84,6 +86,10 @@ python test_real.py
 # Unittest'leri test etmek isterseniz:
 pytest tests/
 ```
+
+## 📄 Lisans
+
+Bu proje [MIT](https://opensource.org/licenses/MIT) lisansı altında açık kaynak olarak paylaşılmıştır.
 
 ## 👨‍💻 Geliştirici
 - [Şeyhmus OK](https://github.com/iamseyhmus7)
