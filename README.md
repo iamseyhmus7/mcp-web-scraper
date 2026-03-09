@@ -42,7 +42,7 @@ Bu server, standart bir `stdio_server` altyapısı kullanarak JSON-RPC 2.0 mimar
   "mcpServers": {
     "mcp-web-scraper": {
       "command": "python",
-      "args": ["-m", "mcp_web_scraper.server"]
+      "args": ["-m", "mcp_web_scraper"]
     }
   }
 }
