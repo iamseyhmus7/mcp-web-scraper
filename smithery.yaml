@@ -1,0 +1,13 @@
+name: mcp-web-scraper
+description: >
+  Autonomous web scraper via MCP. Playwright-based browser automation
+  supporting JS rendering, form filling, screenshots, queue processing
+  and page change monitoring.
+categories:
+  - web-scraping
+  - browser-automation
+  - data-extraction
+startCommand:
+  type: stdio
+  command: uvx
+  args: ["mcp-web-scraper"]
