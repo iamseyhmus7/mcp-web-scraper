@@ -51,7 +51,7 @@ Bu server, standart bir `stdio_server` altyapısı kullanarak JSON-RPC 2.0 mimar
 *Alternatif olarak `uvx` kurarak doğrudan Smithery komutları (`smithery.yaml`) aracılığıyla kullanabilirsiniz.*
 
 ### Deneme ve Geliştirme (Test)
-Uçtan uca tüm bu MCP tool'larının gerçek dünyada nasıl çalıştığını (Wikipedia ve Example sayfalarında) test etmek için proje içindeki test betiğini kullanabilirsiniz:
+Uçtan uca tüm bu MCP tool'larının gerçek dünyada nasıl çalıştığını (Wikipedia,E-ticaretarkadasim ve Example sayfalarında) test etmek için proje içindeki test betiğini kullanabilirsiniz:
 
 ```bash
 # Tüm tool'ların çıktılarını terminale yansıtan test scripti
